@@ -1,0 +1,65 @@
+{
+  "name": "@netless/slide-prefetch",
+  "version": "0.1.0",
+  "description": "Simple script to prefetch packed slide data on navigation.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.iife.min.js",
+  "jsdelivr": "dist/index.iife.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./electron": {
+      "import": "./dist/electron.mjs",
+      "require": "./dist/electron.js"
+    }
+  },
+  "files": [
+    "docs",
+    "dist",
+    "service-worker.js"
+  ],
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "esbuild-dev --cjs scripts/build.ts",
+    "test:web": "esbuild-serve",
+    "test:electron-app": "wait-for-localhost 3000 && esbuild-dev scripts/electromon.ts",
+    "test:electron": "concurrently -k npm:test:web npm:test:electron-app",
+    "doc:web": "npx @hyrious/marked-cli docs/Web.md",
+    "doc:electron": "npx @hyrious/marked-cli docs/Electron.md"
+  },
+  "repository": "netless-io/slide-prefetch",
+  "keywords": [
+    "whiteboard",
+    "slide",
+    "prefetch"
+  ],
+  "author": "hyrious <hyrious@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@hyrious/esbuild-dev": "^0.3.9",
+    "@hyrious/esbuild-serve": "^0.3.12",
+    "@types/node": "^15.12.4",
+    "chokidar": "^3.5.2",
+    "concurrently": "^6.2.0",
+    "electron": "^13.1.4",
+    "esbuild": "^0.12.9",
+    "esbuild-plugin-external-global": "^1.0.1",
+    "rollup": "^2.52.2",
+    "rollup-plugin-dts": "^3.0.2",
+    "typescript": "^4.3.4",
+    "wait-for-localhost-cli": "^2.0.0",
+    "white-web-sdk": "^2.13.6"
+  },
+  "peerDependencies": {
+    "white-web-sdk": "^2.x"
+  },
+  "dependencies": {
+    "@zip.js/zip.js": "^2.3.7"
+  }
+}

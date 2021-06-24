@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.sortImports": true,
+    "source.addMissingImports": true
+  },
+  "prettier.tabWidth": 2,
+  "prettier.endOfLine": "auto",
+  "[html]": {
+    "editor.defaultFormatter": null
+  }
+}
