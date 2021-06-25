@@ -9,10 +9,10 @@ Simple script to prefetch packed slide data on navigation.
 
 ## Develop
 
-Test electron:
-
 ```bash
-npm run build && npm run test:electron
+npm run build
+npm run test:web
+npm run test:electron
 ```
 
 ## License
