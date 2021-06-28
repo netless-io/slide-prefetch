@@ -40,7 +40,7 @@ storing and intercepting. Let's say `render` is the render thread and
 3. Call this library in your page scripts.
 
    ```ts
-   import { SlidePrefetch } from "@netless/slide-prefetch/electron";
+   import { ElectronSlidePrefetch as SlidePrefetch } from "@netless/slide-prefetch";
    const slidePrefetch = new SlidePrefetch({
      // the full resource url will be
      // https://<cdn name>/dynamicConvert/{uuid}/...
