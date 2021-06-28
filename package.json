@@ -1,6 +1,6 @@
 {
   "name": "@netless/slide-prefetch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple script to prefetch packed slide data on navigation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

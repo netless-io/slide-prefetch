@@ -123,6 +123,7 @@ export class SlidePrefetch {
 
   private notify(uuid: string, slides: number[], index: number) {
     if (!this.debounceTimer) clearTimeout(this.debounceTimer);
+    if (!uuid) return;
     this.debounceTimer = setTimeout(this.jumpTo, this.debounceTimeout, uuid, slides, index);
   }
 
