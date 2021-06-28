@@ -21,7 +21,15 @@ let isInstalled = false;
  * new SlidePrefetch({ contextBridge: { name: 'api', method: 'save' } })
  * ```
  */
-export function setupMain({ baseUrl, directory }: { baseUrl: string; directory?: string }) {
+export function setupMain({
+  baseUrl,
+  directory,
+  verbose,
+}: {
+  baseUrl: string;
+  directory?: string;
+  verbose?: boolean;
+}) {
   if (!ipcMain || !app) {
     throw new Error("You need to call `setupMain()` from the main process.");
   }
@@ -38,11 +46,14 @@ export function setupMain({ baseUrl, directory }: { baseUrl: string; directory?:
     if (!fs.existsSync(folder)) {
       await fs.promises.mkdir(folder, { recursive: true });
     }
+    if (verbose) {
+      console.log("write cache", localPath);
+    }
     await fs.promises.writeFile(localPath, Buffer.from(buffer));
   });
 
   protocol.registerFileProtocol("file", (request, callback) => {
-    callback(decodeURIComponent(request.url.replace("file:///", "")));
+    callback(decodeURI(request.url.replace("file:///", "")));
   });
 
   session.defaultSession.webRequest.onBeforeRequest(

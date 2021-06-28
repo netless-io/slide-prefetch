@@ -32,7 +32,7 @@ export function contentType(url: string) {
 // prettier-ignore
 export const urls = {
   layout: (baseUrl: string, uuid: string) =>
-    `${baseUrl}/dynamicConvert/${uuid}/layout.zip`,
+    `${baseUrl}/dynamicConvert/${uuid}/presentationML.zip`,
   share: (baseUrl: string, uuid: string) =>
     `${baseUrl}/dynamicConvert/${uuid}/share.json`,
   res: (baseUrl: string, uuid: string, slideId: number) =>

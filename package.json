@@ -1,6 +1,6 @@
 {
   "name": "@netless/slide-prefetch",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Simple script to prefetch packed slide data on navigation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -48,7 +48,7 @@
     "chokidar": "^3.5.2",
     "concurrently": "^6.2.0",
     "electron": "^13.1.4",
-    "esbuild": "^0.12.10",
+    "esbuild": "^0.12.11",
     "esbuild-plugin-external-global": "^1.0.1",
     "rollup": "^2.52.3",
     "rollup-plugin-dts": "^3.0.2",

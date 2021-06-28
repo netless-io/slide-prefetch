@@ -28,6 +28,9 @@ storing and intercepting. Let's say `render` is the render thread and
    });
    ```
 
+   To make the fetch hook work, you have to enable `webSecurity: false` in your
+   main script. See [test](../test/main.js) for a reference.
+
 2. _Optional_: use `preload.js` and `contextBridge` for safer environment.
 
    ```js

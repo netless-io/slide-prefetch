@@ -176,7 +176,7 @@ export class SlidePrefetch {
     const r = await fetch(urls.layout(this.baseUrl, uuid), { signal: this.abortController.signal });
     this.abortController = undefined;
     if (r.status === 404) {
-      throw new NotFoundError(`not found ${uuid}/layout.zip`);
+      throw new NotFoundError(`not found ${uuid}/presentationML.zip`);
     }
     const hasTriedShare = typeof this.progress[uuid].share === "object";
     this.progress[uuid].step = hasTriedShare ? "res" : "share";

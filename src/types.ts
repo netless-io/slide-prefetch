@@ -18,7 +18,7 @@ export interface Progress {
     /** if `fail` is true, `reason` contains the error message */
     reason?: Error;
     /**
-     * - layout: downloading layout.zip
+     * - layout: downloading presentationML.zip
      * - share: downloading share.json
      * - res: downloading resourceN.zip
      * - end: nothing todo
