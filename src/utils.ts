@@ -34,7 +34,7 @@ export const urls = {
   layout: (baseUrl: string, uuid: string) =>
     `${baseUrl}/dynamicConvert/${uuid}/presentationML.zip`,
   share: (baseUrl: string, uuid: string) =>
-    `${baseUrl}/dynamicConvert/${uuid}/share.json`,
+    `${baseUrl}/dynamicConvert/${uuid}/bigFile.json`,
   res: (baseUrl: string, uuid: string, slideId: number) =>
     `${baseUrl}/dynamicConvert/${uuid}/resources/resource${slideId}.zip`,
   shareRes: (baseUrl: string, name: string) =>

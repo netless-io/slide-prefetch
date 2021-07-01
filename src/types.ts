@@ -19,7 +19,7 @@ export interface Progress {
     reason?: Error;
     /**
      * - layout: downloading presentationML.zip
-     * - share: downloading share.json
+     * - share: downloading bigFile.json
      * - res: downloading resourceN.zip
      * - end: nothing todo
      */

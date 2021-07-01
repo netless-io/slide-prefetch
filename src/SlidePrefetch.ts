@@ -195,7 +195,7 @@ export class SlidePrefetch {
         this.progress[uuid].share = await r.json();
       } catch (error) {
         if (this.verbose) {
-          console.debug(`failed to parse share.json of ${uuid}`);
+          console.debug(`failed to parse bigFile.json of ${uuid}`);
           console.debug(error);
         }
         this.progress[uuid].share = null;
@@ -276,12 +276,12 @@ export class SlidePrefetch {
       const response = new Response(blob, {
         headers: { "Content-Type": contentType(url) },
       });
-      if (url.endsWith("/share.json")) {
+      if (url.endsWith("/bigFile.json")) {
         try {
           this.progress[uuid].share = await response.clone().json();
         } catch (error) {
           if (this.verbose) {
-            console.debug(`failed to parse share.json of ${uuid}`);
+            console.debug(`failed to parse bigFile.json of ${uuid}`);
             console.debug(error);
           }
           this.progress[uuid].share = null;
